@@ -141,7 +141,7 @@ public class BillingManager implements PurchasesUpdatedListener {
     ReadableArguments d = details != null ? details : new MapArguments();
     String oldPurchaseToken = d.getString("oldPurchaseToken");
     ReadableArguments accountIdentifiers = d.getArguments("accountIdentifiers");
-    Boolean isVrPurchaseFlow = d.getBoolean("isVrPurchaseFlow");
+    // Boolean isVrPurchaseFlow = d.getBoolean("isVrPurchaseFlow");
 
     Runnable purchaseFlowRequest = new Runnable() {
       @Override
@@ -174,7 +174,7 @@ public class BillingManager implements PurchasesUpdatedListener {
         }
 
         // false will be the default, unless true is passed
-        purchaseParams.setVrPurchaseFlow(isVrPurchaseFlow);
+        // purchaseParams.setVrPurchaseFlow(isVrPurchaseFlow);
 
         mBillingClient.launchBillingFlow(mActivity, purchaseParams.build());
       }
