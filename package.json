@@ -1,5 +1,5 @@
 {
-  "name": "expo-in-app-purchases",
+  "name": "@qeepsake/expo-in-app-purchases",
   "version": "14.6.0",
   "description": "Expo unimodule for accepting in-app purchases",
   "main": "build/InAppPurchases.js",
@@ -29,7 +29,10 @@
   "author": "650 Industries, Inc.",
   "license": "MIT",
   "homepage": "https://docs.expo.dev/versions/latest/sdk/in-app-purchases/",
-  "dependencies": {},
+  "dependencies": {
+    "react-native": "*",
+    "expo-modules-core": "*"
+  },
   "devDependencies": {
     "expo-module-scripts": "^3.0.0"
   },
