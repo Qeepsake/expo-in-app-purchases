@@ -16,8 +16,7 @@
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module",
     "postpublish": "pinst --enable",
-    "pre-commit": "lint-staged",
-    "postinstall": "husky install"
+    "pre-commit": "lint-staged"
   },
   "keywords": [
     "react-native",
