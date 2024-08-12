@@ -45,9 +45,7 @@ afterEvaluate {
       }
     }
     repositories {
-      maven {
-        url = maven().url
-      }
+      mavenLocal()
     }
   }
 }
