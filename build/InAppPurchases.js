@@ -86,20 +86,14 @@ export async function getProductsAsync(itemList) {
  * You should not call this method on launch because restoring purchases on iOS prompts for the
  * user’s App Store credentials, which could interrupt the flow of your app.
  *
- * @param options An optional `PurchaseHistoryOptions` object.
  * @return Returns a `Promise` that fulfills with an `IAPQueryResponse` that contains an array of
  * `InAppPurchase` objects.
  */
-export async function getPurchaseHistoryAsync(options = { useGooglePlayCache: true }) {
+export async function getPurchaseHistoryAsync() {
     if (!connected) {
         throw new ConnectionError(errors.NOT_CONNECTED);
     }
-    if (Platform.OS === 'android') {
-        return await ExpoInAppPurchases.getPurchaseHistoryAsync(options);
-    }
-    else {
-        return await ExpoInAppPurchases.getPurchaseHistoryAsync();
-    }
+    return await ExpoInAppPurchases.getPurchaseHistoryAsync();
 }
 // @needsAudit
 /**

@@ -60,11 +60,10 @@ export declare function getProductsAsync(itemList: string[]): Promise<IAPQueryRe
  * You should not call this method on launch because restoring purchases on iOS prompts for the
  * user’s App Store credentials, which could interrupt the flow of your app.
  *
- * @param options An optional `PurchaseHistoryOptions` object.
  * @return Returns a `Promise` that fulfills with an `IAPQueryResponse` that contains an array of
  * `InAppPurchase` objects.
  */
-export declare function getPurchaseHistoryAsync(options?: IAPPurchaseHistoryOptions): Promise<IAPQueryResponse<InAppPurchase>>;
+export declare function getPurchaseHistoryAsync(): Promise<IAPQueryResponse<InAppPurchase>>;
 /**
  * Initiates the purchase flow to buy the item associated with this `productId`. This will display a
  * prompt to the user that will allow them to either buy the item or cancel the purchase. When the
