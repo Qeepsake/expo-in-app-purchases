@@ -57,11 +57,8 @@ public class InAppPurchasesModule extends ExportedModule implements RegistryLife
   // Suppressing "unused" warning because this method is exposed to React Native
   @SuppressWarnings("unused")
   @ExpoMethod
-  public void getPurchaseHistoryAsync(final ReadableArguments options, final Promise promise) {
-    String USE_GOOGLE_PLAY_CACHE_KEY = "useGooglePlayCache";
-    if (options.getBoolean(USE_GOOGLE_PLAY_CACHE_KEY, true)) {
-      mBillingManager.queryPurchases(promise);
-    }
+  public void getPurchaseHistoryAsync(final Promise promise) {
+    mBillingManager.queryPurchases(promise);
   }
 
   // Suppressing "unused" warning because this method is exposed to React Native
