@@ -1,6 +1,6 @@
 {
   "name": "@qeepsake/expo-in-app-purchases",
-  "version": "15.0.0",
+  "version": "2.0.0",
   "description": "Expo unimodule for accepting in-app purchases",
   "main": "build/InAppPurchases.js",
   "types": "build/InAppPurchases.d.ts",
